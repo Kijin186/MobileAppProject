@@ -46,9 +46,29 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.Viewhold
 
         switch (position) {
             case 0:
-            holder.background_img.setImageResource(R.drawable.bg_1);
-            holder.layout.setBackgroundResource(R.drawable.list_background_1);
-            break;
+                holder.background_img.setImageResource(R.drawable.bg_1);
+                holder.layout.setBackgroundResource(R.drawable.list_background_1);
+                break;
+
+            case 1:
+                holder.background_img.setImageResource(R.drawable.bg_2);
+                holder.layout.setBackgroundResource(R.drawable.list_background_2);
+                break;
+
+            case 2:
+                holder.background_img.setImageResource(R.drawable.bg_3);
+                holder.layout.setBackgroundResource(R.drawable.list_background_3);
+                break;
+
+            case 3:
+                holder.background_img.setImageResource(R.drawable.bg_4);
+                holder.layout.setBackgroundResource(R.drawable.list_background_4);
+                break;
+
+            case 4:
+                holder.background_img.setImageResource(R.drawable.bg_5);
+                holder.layout.setBackgroundResource(R.drawable.list_background_5);
+                break;
         }
     }
     @Override
