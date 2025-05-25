@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445318751016",
+    "project_id": "educationapp-dbc08",
+    "storage_bucket": "educationapp-dbc08.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445318751016:android:97b88d2f0cc147a5fa661d",
+        "android_client_info": {
+          "package_name": "com.example.finalprojectmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1018bbf2zeeF9oOXZED2m6vprk9Jlb5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

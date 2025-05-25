@@ -1,15 +1,18 @@
 package com.example.finalprojectmobile.Courses;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.finalprojectmobile.Activity.MainActivity;
 import com.example.finalprojectmobile.Adapter.CoursesAdapter;
 import com.example.finalprojectmobile.Domain.CoursesDomain;
 import com.example.finalprojectmobile.R;
@@ -33,6 +36,9 @@ public class CourseListActivity extends AppCompatActivity {
         });
 
         initRecyclerView();
+
+        ConstraintLayout backBtn = findViewById(R.id.backbtn);
+        backBtn.setOnClickListener(v -> startActivity(new Intent(CourseListActivity.this, MainActivity.class)));
     }
     private void initRecyclerView() {
         ArrayList<CoursesDomain> items = new ArrayList<>();

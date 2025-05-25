@@ -45,5 +45,10 @@ public class MainActivity extends AppCompatActivity {
         //Navigate popular courses
         TextView saBtn = findViewById(R.id.sabtn);
         saBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CourseListActivity.class)));
+
+        //Bottom Navigate
+        //Navigate to Bio
+        ConstraintLayout bioBtn = findViewById(R.id.biobtn);
+        bioBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, BioActivity.class)));
     }
 }
