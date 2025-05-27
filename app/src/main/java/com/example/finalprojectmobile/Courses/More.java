@@ -42,9 +42,9 @@ public class More extends AppCompatActivity {
     }
     private void initRecyclerView() {
         ArrayList<CoursesDomain> items = new ArrayList<>();
-        items.add(new CoursesDomain("Engaging in to the game industry with Unity", 169, "unity_ic"));
-        items.add(new CoursesDomain("Google Cloud Platform Architecture",69,"ic_2"));
-        items.add(new CoursesDomain("PG Program in Big Data Engineering",49,"ic_5"));
+        items.add(new CoursesDomain("Engaging in to the game industry with Unity", "unity_ic", "AmGSEH7QcDg"));
+        items.add(new CoursesDomain("Google Cloud Platform Architecture","ic_2", "IUU6OR8yHCc"));
+        items.add(new CoursesDomain("PG Program in Big Data Engineering","ic_5", "bAyrObl7TYE"));
 
         recyplerViewCourse = findViewById(R.id.courses_view);
         recyplerViewCourse.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

@@ -1,6 +1,7 @@
 package com.example.finalprojectmobile.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.finalprojectmobile.Domain.CoursesDomain;
+import com.example.finalprojectmobile.Player.YoutubeDisplay;
 import com.example.finalprojectmobile.R;
 
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.Viewhold
 
     ArrayList<CoursesDomain> items;
     Context context;
+
     public CoursesAdapter(ArrayList<CoursesDomain> items) {
         this.items = items;
     }
@@ -35,11 +38,13 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.Viewhold
 
     @Override
     public void onBindViewHolder(@NonNull CoursesAdapter.Viewholder holder, int position) {
-        holder.title.setText(items.get(position).getTitle());
-        holder.price.setText("$" + items.get(position).getPrice());
+        CoursesDomain course = items.get(position);
 
-        int drawableResourcesId=holder.itemView.getResources()
-                .getIdentifier(items.get(position).getPicPath(), "drawable",holder.itemView.getContext().getPackageName());
+        holder.title.setText(course.getTitle());
+
+        int drawableResourcesId = holder.itemView.getResources()
+                .getIdentifier(course.getPicPath(), "drawable", holder.itemView.getContext().getPackageName());
+
         Glide.with(context)
                 .load(drawableResourcesId)
                 .into(holder.pic);
@@ -49,41 +54,45 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.Viewhold
                 holder.background_img.setImageResource(R.drawable.bg_1);
                 holder.layout.setBackgroundResource(R.drawable.list_background_1);
                 break;
-
             case 1:
                 holder.background_img.setImageResource(R.drawable.bg_2);
                 holder.layout.setBackgroundResource(R.drawable.list_background_2);
                 break;
-
             case 2:
                 holder.background_img.setImageResource(R.drawable.bg_3);
                 holder.layout.setBackgroundResource(R.drawable.list_background_3);
                 break;
-
             case 3:
                 holder.background_img.setImageResource(R.drawable.bg_4);
                 holder.layout.setBackgroundResource(R.drawable.list_background_4);
                 break;
-
             case 4:
                 holder.background_img.setImageResource(R.drawable.bg_5);
                 holder.layout.setBackgroundResource(R.drawable.list_background_5);
                 break;
         }
+
+        // ✅ On click, open YouTube activity with videoId
+        holder.layout.setOnClickListener(v -> {
+            Intent intent = new Intent(context, YoutubeDisplay.class);
+            intent.putExtra("videoId", items.get(position).getVideoId()); // Send video ID
+            context.startActivity(intent);
+        });
     }
+
     @Override
     public int getItemCount() {
         return items.size();
     }
 
     public class Viewholder extends RecyclerView.ViewHolder {
-        TextView title,price;
-        ImageView pic,background_img;
+        TextView title;
+        ImageView pic, background_img;
         ConstraintLayout layout;
+
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.titleTxt);
-            price = itemView.findViewById(R.id.priceTxt);
             pic = itemView.findViewById(R.id.pic);
             background_img = itemView.findViewById(R.id.background_img);
             layout = itemView.findViewById(R.id.mail_layout);

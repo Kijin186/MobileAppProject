@@ -42,10 +42,10 @@ public class Designing extends AppCompatActivity {
     }
     private void initRecyclerView() {
         ArrayList<CoursesDomain> items = new ArrayList<>();
-        items.add(new CoursesDomain("Learn how to work with picture", 29, "pts_ic"));
-        items.add(new CoursesDomain("Improve yourself in UI/UX", 69, "xd_ic"));
-        items.add(new CoursesDomain("Starting in 3D model", 15, "blender_ic"));
-        items.add(new CoursesDomain("Introduction to UI design history",79,"ic_4"));
+        items.add(new CoursesDomain("Learn how to work with picture", "pts_ic", "xTzvQkOll2U"));
+        items.add(new CoursesDomain("Improve yourself in UI/UX", "xd_ic", "WEljsc2jorI"));
+        items.add(new CoursesDomain("Starting in 3D model", "blender_ic", "4haAdmHqGOw"));
+        items.add(new CoursesDomain("Introduction to UI design history","ic_4","hs-yH-WnjBQ"));
 
         recyplerViewCourse = findViewById(R.id.courses_view);
         recyplerViewCourse.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

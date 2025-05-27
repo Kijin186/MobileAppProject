@@ -17,9 +17,15 @@ import com.example.finalprojectmobile.Adapter.CoursesAdapter;
 import com.example.finalprojectmobile.Domain.CoursesDomain;
 import com.example.finalprojectmobile.R;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+
+
 import java.util.ArrayList;
 
 public class Developing extends AppCompatActivity {
+
     private RecyclerView.Adapter adapterCoureList;
     private RecyclerView recyplerViewCourse;
 
@@ -42,11 +48,11 @@ public class Developing extends AppCompatActivity {
     }
     private void initRecyclerView() {
         ArrayList<CoursesDomain> items = new ArrayList<>();
-        items.add(new CoursesDomain("Learn from the basic", 29, "c_ic"));
-        items.add(new CoursesDomain("Get started in Mobile development", 69, "kotlin_ic"));
-        items.add(new CoursesDomain("Fundamental of Java Programming", 150, "ic_3"));
-        items.add(new CoursesDomain("Welcome to Python", 79, "python_ic"));
-        items.add(new CoursesDomain("Advanced certification in Mobile", 149, "flutter_ic"));
+        items.add(new CoursesDomain("Learn from the basic", "c_ic", "-TkoO8Z07hI"));
+        items.add(new CoursesDomain("Get started in Mobile development", "kotlin_ic","blKkRoZPxLc"));
+        items.add(new CoursesDomain("Fundamental of Java Programming", "ic_3", "xTtL8E4LzTQ"));
+        items.add(new CoursesDomain("Welcome to Python", "python_ic", "ix9cRaBkVe0"));
+        items.add(new CoursesDomain("Advanced certification in Mobile","flutter_ic", "3kaGC_DrUnw"));
 
         recyplerViewCourse = findViewById(R.id.courses_view);
         recyplerViewCourse.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

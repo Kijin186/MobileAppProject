@@ -2,13 +2,13 @@ package com.example.finalprojectmobile.Domain;
 
 public class CoursesDomain {
     private String title;
-    private double price;
     private String picPath;
+    private String videoId;
 
-    public CoursesDomain(String title, double price, String picPath) {
+    public CoursesDomain(String title, String picPath, String videoId) {
         this.title = title;
-        this.price = price;
         this.picPath = picPath;
+        this.videoId = videoId;
     }
 
     public String getTitle() {
@@ -27,11 +27,11 @@ public class CoursesDomain {
         this.picPath = picPath;
     }
 
-    public double getPrice() {
-        return price;
+    public String getVideoId() {  // ✅ Correct getter method
+        return videoId;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setVideoId(String videoId) {  // ✅ Optional: add setter if needed
+        this.videoId = videoId;
     }
 }

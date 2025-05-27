@@ -42,11 +42,11 @@ public class CourseListActivity extends AppCompatActivity {
     }
     private void initRecyclerView() {
         ArrayList<CoursesDomain> items = new ArrayList<>();
-        items.add(new CoursesDomain("Advanced certification Program in AI",169,"ic_1"));
-        items.add(new CoursesDomain("Google Cloud Platform Architecture",69,"ic_2"));
-        items.add(new CoursesDomain("Fundamental of Java Programming",150,"ic_3"));
-        items.add(new CoursesDomain("Introduction to UI design history",79,"ic_4"));
-        items.add(new CoursesDomain("PG Program in Big Data Engineering",49,"ic_5"));
+        items.add(new CoursesDomain("Advanced certification Program in AI", "ic_1", "dJhlMn2otxA"));
+        items.add(new CoursesDomain("Google Cloud Platform Architecture","ic_2", "IUU6OR8yHCc"));
+        items.add(new CoursesDomain("Fundamental of Java Programming", "ic_3", "xTtL8E4LzTQ"));
+        items.add(new CoursesDomain("Introduction to UI design history", "ic_4", "hs-yH-WnjBQ"));
+        items.add(new CoursesDomain("PG Program in Big Data Engineering", "ic_5", "bAyrObl7TYE"));
 
         recyplerViewCourse = findViewById(R.id.popular_courses_view);
         recyplerViewCourse.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

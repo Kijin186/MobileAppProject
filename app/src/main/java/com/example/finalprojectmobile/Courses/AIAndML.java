@@ -42,8 +42,8 @@ public class AIAndML extends AppCompatActivity {
     }
     private void initRecyclerView() {
         ArrayList<CoursesDomain> items = new ArrayList<>();
-        items.add(new CoursesDomain("Advanced certification Program in AI", 169, "ic_1"));
-        items.add(new CoursesDomain("Easy tutorial for Google Colab", 69, "colab_ic"));
+        items.add(new CoursesDomain("Advanced certification Program in AI", "ic_1", "dJhlMn2otxA"));
+        items.add(new CoursesDomain("Easy tutorial for Google Colab", "colab_ic", "RLYoEyIHL6A"));
 
         recyplerViewCourse = findViewById(R.id.courses_view);
         recyplerViewCourse.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

@@ -17,6 +17,7 @@ import com.example.finalprojectmobile.Courses.Designing;
 import com.example.finalprojectmobile.Courses.Developing;
 import com.example.finalprojectmobile.Courses.More;
 import com.example.finalprojectmobile.R;
+import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
         //Navigate Developing
         ConstraintLayout btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Developing.class)));
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Bottom Navigate
         //Navigate to Bio
-        ConstraintLayout bioBtn = findViewById(R.id.biobtn);
+        ConstraintLayout bioBtn = findViewById(R.id.home_biobtn);
         bioBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, BioActivity.class)));
     }
 }

@@ -1,9 +1,11 @@
 package com.example.finalprojectmobile.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,5 +23,8 @@ public class BioActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ConstraintLayout homeBtn = findViewById(R.id.bio_homebtn);
+        homeBtn.setOnClickListener(v -> startActivity(new Intent(BioActivity.this, MainActivity.class)));
     }
 }

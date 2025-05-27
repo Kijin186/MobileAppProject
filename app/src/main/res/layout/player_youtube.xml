@@ -9,7 +9,6 @@
     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/youtube_player_view"
-        app:videoId="dQw4w9WgXcQ" />
+        android:id="@+id/youtubePlayer" />
 
 </RelativeLayout>
