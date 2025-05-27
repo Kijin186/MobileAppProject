@@ -42,6 +42,7 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     implementation(libs.legacy.support.v4)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

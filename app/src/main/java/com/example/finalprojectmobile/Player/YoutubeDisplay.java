@@ -1,11 +1,15 @@
 package com.example.finalprojectmobile.Player;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.example.finalprojectmobile.Activity.MainActivity;
+import com.example.finalprojectmobile.Courses.CourseListActivity;
 import com.example.finalprojectmobile.R;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
@@ -45,5 +49,8 @@ public class YoutubeDisplay extends AppCompatActivity {
 
         IFramePlayerOptions options = new IFramePlayerOptions.Builder().controls(0).build();
         youtubePlayerView.initialize(youTubePlayerListener, options);
+
+        ConstraintLayout backBtn = findViewById(R.id.back);
+        backBtn.setOnClickListener(arg0 -> finish());
     }
 }
